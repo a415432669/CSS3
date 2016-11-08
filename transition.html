@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.d1{
+				width: 100px;
+				height: 100px;
+				margin: 30px;
+				background-color: orange;
+			}
+			.tr{
+				transition: all 5s;
+			}
+			.content:hover .d1{
+				width: 700px;
+			}
+			
+			.ease{transition: all 3s ease 0.5s;}
+			.linear{transition: all 3s linear;}
+			.easein{transition: all 3s ease-in;}
+			.easeout{transition: all 3s ease-out;}
+			.easeinout{transition: all 3s ease-in-out;}
+		</style>
+	</head>
+	<body>
+		<!--简单例子说明过渡效果-->
+		<div class="d1">
+			
+		</div>
+		<div class="content">
+			<div class="d1 ease">
+				ease
+			</div>
+			<div class="d1 linear">
+				linear
+			</div>
+			<div class="d1 easein">
+				ease-in
+			</div>
+			<div class="d1 easeout">
+				ease-out
+			</div>
+			<div class="d1 easeinout">
+				ease-in-out
+			</div>
+		</div>
+		
+		
+		
+		<!--
+			transition:transition-property
+			transition-propery:更改状态属性 ,那么所有发生变化的属性都会应用transition.
+			transition-duration：过渡效果的持续时间。默认值为0，当你不写的时候就会立即生效。
+			transition-timing-function:ease(默认)、linear、ease-in、ease-out、ease-in-out
+			ease:缓慢出去
+			linear:线性
+			ease-in:缓慢进来，慢慢加快出去
+			ease-out：快速进来，缓慢出去
+			ease-in-out：缓慢进来，缓慢出去
+			transition-delay:用于制定多长时间触发transition，默认值0
+			小技巧：transition-delay可用于避免用户鼠标过于敏感或者非故意想要过渡效果时候。
+			
+		-->
+	</body>
+</html>

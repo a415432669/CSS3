@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.div1{
+				width: 300px;
+				height: 300px;
+				
+				background-image: url(img/1.jpg),url(img/border.png);
+				background-size: 70%,50%;
+				background-repeat: no-repeat;
+				background-position: center center,0% 0%;
+			}
+			.div2{
+				width: 300px;
+				height: 300px;
+				
+				background-image: url(img/1.jpg);
+				background-size: 100%;
+				background-repeat: no-repeat;
+				margin: 0 auto;
+				border: 20px solid rgba(0,0,0,0.2);
+				padding: 40px;
+				background-origin:content-box ;
+				/*background-origin:content-box ;*/
+				background-clip: border-box;
+				
+				
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			background-iamge可设置多张图片，并要用逗号隔开。
+			
+		-->		
+		<!--<div class="div1">
+			
+		</div>-->
+		
+		<!--
+			background-origin:规定背景的定位区域
+			border-box从border开始
+			padding-box从padding开始
+			content-box从内容区域开始
+		-->
+		<div class="div2">
+			这是内容区域
+		</div>
+		
+		<!--
+			background-clip规定背景的绘制区域
+			border-box裁剪边框以内的背景
+			padding-box裁剪padding以内的背景
+			content-box从内容区域开始裁剪内容区域以内的背景
+		-->
+	</body>
+</html>

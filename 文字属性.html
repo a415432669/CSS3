@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.d1{
+				width: 200px;
+				white-space: nowrap;
+				overflow: hidden;
+				border: 1px solid #000;
+			}
+			.d2{
+				width: 200px;
+				border: 1px solid #000;
+			}
+			.of1{
+				/*省略符号代表被修剪的内容。*/
+				text-overflow: ellipsis;
+			}
+			.of2{
+				/*默认值-修剪文本*/
+				text-overflow: clip;
+			}
+			.ww1{
+				/*默认值，只允许在断字点换行*/
+				word-wrap: normal;
+			}
+			.ww2{
+				/*在长单词或URL地址内部进行换行*/
+				word-wrap: break-word;
+			}
+			.wb1{
+				word-break: break-all;
+			}
+			.wb2{
+				word-break: keep-all;
+			}
+		</style>
+	</head>
+	<body>
+		<!--text-overflow
+			文本溢出的时候，如何显示溢出内容
+			
+			clip：修剪文本
+			ellipsis:省略符号代表被修剪的内容。
+		-->
+		
+		<div class="d1 of1">
+			容器内，如果太长，将会什么发生什么呢？
+		</div>
+		<div class="d1 of2">
+			容器内，如果太长，将会什么发生什么呢？
+		</div>
+		<div class="d2 ww">
+			i love you oaowejgfoiasjgoasgioashiohsioghasiogs
+		</div>
+		<!--
+			work-break指定飞CJK脚本的断行规则，文字不适合中日韩等汉字类型
+			normal/kell-all只能在半角或连字符处换行
+			break-all允许在单词内换行
+		-->
+		<div class="d2 wb1">
+			this paragraph contain sone text. this line will-berda-at-haogng.
+		</div>
+		<div class="d2 wb2">
+			this paragraph contain sone text. this line will-berda-at-haogng.
+		</div>
+		
+	</body>
+</html>

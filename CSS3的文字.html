@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.d1{
+				background: #666;
+				padding: 30px;
+				font-size:55px;
+				font-family:"微软雅黑";
+				font-weight:bold;
+				color: #fff;
+				text-align: center;
+				}
+			/*基础写法 
+			 颜色   水平的偏移量   垂直的偏移量   模糊度
+			 * */	
+			.text1{
+				text-shadow: red 60px 10px 5px;
+			}
+			/*辉光的效果*/
+			.text2{
+				/*text-shadow: 0 0 20px red ;
+				 改变不同的模糊半径达到不同的效果
+				 * */
+				text-shadow: 0 0 5px #fff,0 0 10px #fff, 0 0 15px #fff,0 0 40px #ff00de, 0 0 70px #FF00DE;
+			}
+			/*钢印字体效果*/
+			.text3{
+				text-shadow: 0 1px 1px #fff;
+				color: #000;
+			}
+			/*凸出字体效果*/
+			.text4{
+				color: #ccc;
+				text-shadow: -1px -1px 0 #fff,1px 1px 0 #333,1px 1px 0 #444;
+			}
+			/*模糊字体效果*/
+			.text5{
+				color: transparent;
+				text-shadow: 0 0 5px deepskyblue;
+			}
+			/*3D字体效果*/
+			.text6{
+				color: #fff;
+				/*text-shadow: 1px 1px rgba(197,233,248,0.8), 2px 2px rgba(197,223,248,0.8),3px 3px rgba(197,223,248,0.8),4px 4px rgba(197,223,248,0.8),5px 5px rgba(197,223,248,0.8),6px 6px rgba(197,223,248,0.8);*/
+				text-shadow: -1px -1px rgba(197,233,248,0.8), -2px -2px rgba(197,223,248,0.8),-3px -3px rgba(197,223,248,0.8),-4px -4px rgba(197,223,248,0.8),-5px -5px rgba(197,223,248,0.8),-6px -6px rgba(197,223,248,0.8);
+			}
+			/*vintage retro*/
+			.text7{
+				color: #eee;
+				text-shadow: 5px 5px 0 #666,7px 7px 0 #eee;
+			}
+			/*补色效果*/
+			.text8{
+				color: rgba(255,179,140,0.5);
+				text-shadow: 3px 3px 0 rgba(180,255,0,0.5);
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			text-shadow
+			取值：
+			length:阴影延伸的距离。 x y水平和垂直偏移的距离
+			color:阴影的颜色，也可以用RGBA来做透明色
+			shadow:阴影的模糊值，不可以是复制。
+		-->
+		
+		<div class="d1 text1">
+			字体阴影
+		</div>
+		<div class="d1 text2">
+			字体阴影
+		</div>
+		<div class="d1 text3">
+			字体阴影
+		</div>
+		<div class="d1 text4">
+			字体阴影
+		</div>
+		<div class="d1 text5">
+			字体阴影
+		</div>
+		<div class="d1 text6">
+			字体阴影
+		</div>
+		<div class="d1 text7">
+			字体阴影
+		</div>
+		<div class="d1 text8">
+			字体阴影
+		</div>
+		
+	</body>
+</html>

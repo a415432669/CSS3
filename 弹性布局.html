@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	<!--
+		display:指定HTML元素盒子类型/block/inline/inline-block/flex
+		flex-direction:指定弹性容器中子元素排列方式
+			row:横向，从左到右（默认）
+			row-reverse:反转横向排列（右对齐，从后往前排），最后一项在最前面
+			column:纵向排列
+			column-reverse:反纵向排列，最后一项排在最上面。
+		justify-content:弹性盒子在主轴（横轴）方向上的对齐方式
+			flex-start:弹性项目向行头紧挨填充(默认值)
+			flex-end:弹性项目向行尾紧挨填充
+			center:弹性居中紧挨填充
+			space-between:弹性项目平均分布在该上,紧紧挨着父元素边
+			space-around:弹性项目平均分布在该上，两边都留有一半的间隔空间
+		align-item:设置弹性盒子在侧轴（纵轴）方向上的对齐方式
+			flex-start:弹性盒子元素在侧轴起始位置的边界紧靠住该行侧轴的起始边界
+			flex-end:弹性盒子元素在侧轴起始位置的边界紧靠住该行侧轴的结束边界
+			center:弹性盒子在侧轴居中放置
+			baseline:基准线对齐
+			stretch:延伸，拉长边距盒尺寸尽可能进阶所在行尺寸。(默认值)
+		flex-warp:设置弹性盒子的子元素超出父容器是否换行
+			nowarp: 默认值，弹性容器为单行，子元素容易溢出容器
+			warp:弹性容器为多行。溢出的子元素会被放置到新的一行。
+			warp-reverse：反转warp排列
+		align-content:修改flex-warp属性的行为，类似align-items，但不是设置子元素对齐，而是设置行对齐
+			stretch:各行将会伸展占用剩余的空间各项（默认值）
+			flex-star：各行向弹性容器的起始位置堆叠
+			flex-end:各行向弹性容器结束位置堆叠
+			center:各行向弹性容器中间位置堆叠
+			space-between:各行在弹性容器中平均分布
+			space-around:各行在弹性容器中平均分布，两端保留子元素与子元素间距大小的一半；
+		order:设置弹性盒子的子元素排列顺序,用整数数值来定义排列顺序，数值小的排在前面，可以为负值。
+		align-self：在弹性子元素上使用。覆盖父元素align-items属性
+		    flex-start/flex-end/center/baseline/stretch
+		    auto:查看父元素的align-items，如果没有父元素，那么计算stretch
+		flex:设置弹性盒子的子元素如何分配空间
+	-->	
+	<style type="text/css">
+	*{margin: 0;padding: 0;}
+		.flex-container{
+			display: flex;
+			width: 600px;
+			height: 600px;
+			background-color: skyblue;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+			/*align-items: center;*/
+			align-content: center;
+
+		}
+		.flex-item{
+			/*width: 100px;
+			height: 250px;*/
+			background: orange;
+			color: #fff;
+			font-weight: bold;
+			border: 5px solid #000;
+		}
+		/*.item1{
+			font-size: 15px;
+		}
+		.item2{
+			font-size: 30px;
+		}
+		.item3{
+			font-size: 45px;
+		}*/
+		/*.first{
+			order: -1;
+		}*/
+		
+		.item1{
+			flex: 2;
+		}
+		.item2{
+			flex: 1;
+		}
+		.item3{
+			flex: 1;
+		}
+		/*.item3{
+			align-self: flex-end;
+		}*/
+	</style>
+		<div class="flex-container">
+			<div class="flex-item item1">
+				item1
+			</div>
+			<div class="flex-item item2 first">
+				item2
+			</div>
+			<div class="flex-item item3">
+				item3
+			</div>
+		</div>
+	
+	
+	</body>
+	
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.d1{
+				width: 200px;
+				height: 200px;
+				margin: 50px auto;
+				background: deepskyblue;
+				transition: all 4s;
+				transform-origin:50% 0% ;/*设置旋转的基点*/
+				color: #fff;
+				font-size: 30px;
+			}
+			
+			/*
+			 rotateX,根据transform-origin旋转的原点为中点，以X轴进行旋转
+			 rotateY,根据transform-origin旋转的原点为中点，以y轴进行旋转
+			 rotateZ,根据transform-origin旋转的原点为中点，以Z轴进行旋转
+			 * */
+			
+			.rotate1:hover{
+				transform: rotateX(180deg);
+				background: orange;
+			}
+			/*
+			 rotate是2D旋转
+			 如果设置正数那么表示顺时针旋转，如果设置的值为负值那么表示逆时针旋转
+			 * */
+			.rotate2:hover{
+				transform: rotate(1145deg);
+			}
+			
+		</style>
+	</head>
+	<body>
+		<!--transform变形
+			旋转：rotate
+			扭曲：skew
+			缩放：scale
+			移动：translate
+		-->
+		<div class="d1">
+			
+		</div>
+		<div class="d1 rotate1">
+			3D旋转
+		</div>
+		<div class="d1 rotate2">
+			
+		</div>
+		
+		
+		
+		<style type="text/css">
+			.dd{
+				width:400px;
+				height: 400px;
+				-webkit-perspective: 500;/*3D透视位置*/
+				perspective-origin: 10% 50%;/*3D元素的基数位置*/
+				}
+			.d2{
+				width: 200px;
+				height: 200px;
+				background: orchid;
+				margin: 30px auto;
+			}
+			.translate1{
+				transform: translate(200px,200px);
+			}
+			.translate2{
+				transform: translate3d(200px,200px,200px);
+			}
+			
+			
+			.scale1{
+				transform: scale(0.5);
+			}
+		</style>
+		<!--
+			translate：2D移动，即平面移动，第一个为X轴的偏移值，第二个Y轴坐标的偏移值
+		-->
+		<div class="d2">
+			
+		</div>
+		<div class="d2">
+			
+		</div>
+		
+		<div class="dd">
+			<div class="d2 translate2">
+			
+			</div>
+		</div>
+		<!--
+			scale缩放。
+		-->
+		<div class="d2  scale1"></div>
+		
+		
+		<style type="text/css">
+		
+		/*
+		 skewX沿着X轴进行拉伸X度
+		 skewY沿着Y轴进行拉伸Y度
+		 skew(x,y)沿着X轴拉伸x度和沿着Y轴拉伸y度
+		 * */
+		.skew1{
+			transform: skewX(10deg);
+		}	
+		.skew2{
+			transform: skewY(10deg);
+		}
+		.skew3{
+			transform: skew(10deg,10deg);
+		}
+		</style>
+		<div class="d2 skew3">
+			
+		</div>
+		
+		
+		
+		
+	</body>
+</html>

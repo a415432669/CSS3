@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.d1{
+				width: 100px;
+				height: 100px;
+				background-color: skyblue;
+				
+			}
+			.ani{
+				/*animation:yidong 2s ease infinite;*/
+				animation-name: yidong;/*规定是@keyframes动画的名称*/
+				animation-duration: 6s;/*动画完成1个周期所花费的时间*/
+				animation-timing-function:steps(6,start);/*规定动画速度曲线。默认是ease*/
+				/*steps()阶跃函数
+				 steps(1,start)/steps(1,end)
+				 第一个参数是步数（变化了多少次），第二个是指定每个间隔的起点或是终点发生阶跃变化，默认end
+				 start:以下一帧的显示效果来填充间隔动画
+				 end:以上一帧的效果来显示间隔动画。
+				 * */
+				/*animation-delay: 2s;*//*规定动画何时开始*/
+				animation-iteration-count: infinite ;/*规定动画播放的次数、infinite(无限循环)*/
+				animation-direction: normal;/*规定下一周期是否逆向播放，normal(默认值)，reverse(反向播放)，
+				alearnate(动画在奇数次是正向播放，偶数次是反向播放)，alternate-reverse(动画在奇数次反向播放，偶数次是正向播放)*/
+				animation-play-state:running;/*规定动画是否正在运行或者是暂停，默认是running*/
+				
+				
+			}
+			@keyframes yidong{
+				from{transform: translateX(0px);}
+				to{transform: translateX(600px); background-color: orange;}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="d1">
+			
+		</div>
+		<div class="d1 ani">
+			
+		</div>
+	</body>
+</html>

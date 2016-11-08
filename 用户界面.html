@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.div1{
+				width: 200px;
+				height: 200px;
+				background-color: skyblue;
+			}
+			.div2{
+				width: 200px;
+				height: 200px;
+				background-color: skyblue;
+				border: 50px solid #000;
+				box-sizing: content-box;
+			}
+			.divResize{
+				border: 2px solid #87CEEB;
+				padding: 40px;
+				width: 200px;
+				display: inline-block;
+				resize: vertical;
+				overflow: auto;
+			}
+			.divOutlineOffset{
+				width: 200px;
+				height: 200px;
+				margin:100px auto;
+				border: 2px solid black;
+				outline: 2px solid skyblue;
+				outline-offset: 15px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<!--
+			box-sizing:
+				border-box:对元素指定宽度和高度包括padding和border的指定
+				content-box:指定元素的宽度和高度适用于box的宽度和高度。元素的填充和边框布局除外的。
+		-->
+		<div class="div1">
+			
+		</div>
+		<div class="div2">
+			
+		</div>
+		<!--
+			resize:指定元素是否由用户调整大小
+				none:用户无法调整元素尺寸
+				both:用户可以调整元素的高度和宽度
+				horizontal:可调整元素的宽度
+				vertical:可调整元素的高度
+		-->
+		<div class="divResize">
+			毛泽东曾说：“谁使长征胜利的呢？是共产党。没有共产党，这样的长征是不可能设想的。”
+		</div>
+		
+		<!--outline-offset
+			对轮廓进行便宜，并在超出边框边缘的位置绘制轮廓
+			距离，长度
+		-->
+		
+		<div class="divOutlineOffset">
+			
+		</div>
+	</body>
+</html>
